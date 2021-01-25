@@ -1,0 +1,12 @@
+-imgPath='images/'
+mixin infoContact (info)
+  each item in info
+    .box(class=`${item[0]}`)
+      .imgBox
+          img(src=imgPath+`${item[0]}`+".svg")
+      .content
+        .icon
+          img(src=imgPath+`${item[0]}`+".svg")
+        h3 #{item[1]}
+        h4 #{item[2]}
+        h4 #{item[3]}

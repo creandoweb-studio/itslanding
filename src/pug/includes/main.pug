@@ -7,14 +7,6 @@ section.main
     .main__make_phrase
       p #[spam.bigBold " ]Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet #[spam.bigBold "]
     .main__make_services
-      //- .main__make_services--icon
-      //-   i.icon.fa.fa-code
-      //- .main__make_services--title
-      //-   h4 Desarrollo de Software
-      //- .main__make_services--content
-      //-   p Expertos en desarrollo de aplicaciones móviles y de escritorio, donde la innovación y la creatividad nos permiten proporcionar soluciones de primer nivel según sus necesidades.
-      //- .main__make_services--callBtn
-      //-   a(href="#" target="blank") SOFTWARE
       +cardSingle(
         [
           ["code", "Desarrollo de software", "Expertos en desarrollo de aplicaciones móviles y de escritorio, donde la innovación y la creatividad nos permiten proporcionar soluciones de primer nivel según sus necesidades.", "SOFTWARE"],
@@ -56,5 +48,19 @@ section.main
       h3 Trayectos seguros en el transporte público y privado.
     .main__security_text
       p “Software para dispositivos móviles y centros de datos de licenciamieto propio que facilita la escabilidad en el servicio.”
+  .main__contactUS
+    .main__contactUS_container
+      //- .box
+        //- .imgBox
+        //-   img(src="../../images/call.svg")
+        //- .content
+      +infoContact(
+        [
+          ["call", "Teléfono", "033 333 33 33", "310 301 30 30"],
+          ["email", "Email", "as@as.as", "otro@as.as"],
+          ["map", "Dirección", "Calle 10 # 1 - 01", "Manizales"]
+        ]
+      )
+
 section.footer
 
