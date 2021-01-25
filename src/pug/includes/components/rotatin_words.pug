@@ -1,0 +1,12 @@
+mixin rotatinWords(titulo, contenido)
+  section.rw-wrapper
+    h3.rw-sentence
+      span #{titulo}
+      .rw-words.rw-words-1
+        each item in contenido
+          span #{item[0]}
+      .rw-words.rw-words-2
+        each item in contenido
+          span #{item[1]}
+
+

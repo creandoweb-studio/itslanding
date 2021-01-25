@@ -1,0 +1,64 @@
+
+//GENERALES
+//path
+$path: './images/';
+
+//Tamaño de fuente para el proyecto
+//$fsBase:62.5%;
+$fsBase:16px;
+
+//alto general
+$hBase:100vh;
+
+//fuentes
+// $ftIncosolata:'Inconsolata', monospace;
+// $ftyanone:'Yanone Kaffeesatz', sans-serif;
+// $ftRaleway:'Raleway', sans-serif;
+
+// grosor
+$ligth:300;
+$normal:400;
+$medium:500;
+$bold:700;
+
+//Familia de fuentes
+$ftroboto: 'Roboto', sans-serif;
+$ftOswald: 'Oswald', sans-serif;
+
+// Variables de color
+// $color     : rgb(44, 43, 43);
+$color     : #1b1a1c;
+$txtResalte: #675e66;
+$baseredes : #fdfbfd;
+$primario  : #F330E0;
+// $primario: #cd6be6;
+$primario2 : #6a36d9;
+$primario3: #ea2081;
+$prueba01  : rgb(20, 7, 53);
+$secundario:rgb(119, 124, 254);
+$resalte : #91ae45;
+$clAlterno : #dc85d3;
+
+// variables de media query
+// $xsScreen:470px;
+// $smallScreen : 520px;
+// $mediumScreen: 750px;
+// $wideScreen  : 1024px;
+// $largeScreen : 1280px;
+// $xlScreen: 1366px;
+// $opScreen:1480px;
+
+$xsScreen:      320px; //mobile default - pequeño (360 * 640) 23% de uso - variacion inferior (320 * 479)
+$smallScreen :  480px; //landscape mobile (480 * 599)
+$mediumScreen:  600px; // (600 * 769)
+$wideScreen  :  760px; // tablet default (768 * 1024)
+$largeScreen :  920px;
+$xlScreen:      1200px; // portatil medio (1366 * 768) 12% de uso
+$opScreen:      1400px; // desktop default escritorio medio (1440 * 900) 3.2%
+
+// 360×640 (móvil pequeño): 22,64%.
+// 1366×768 (ordenador portátil medio): 11,98%.
+// 1920×1080 (escritorio grande): 7,35%.
+// 375×667 (móvil medio): 5%.
+// 1440×900 (escritorio medio): 3,17%.
+// 720×1280 (móvil grande): 2,74%.

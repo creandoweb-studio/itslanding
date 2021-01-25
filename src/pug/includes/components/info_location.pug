@@ -1,0 +1,32 @@
+-imgPath='images/'
+- var ubicacion  = ['calle 10 # 2e - 79', 'Barrio Cambulos', 'Pitalito']
+- var desarrollo = ['314 723 40 97']
+- var comercial  = ['310 841 46 80', '304 407 12 88']
+- var correo     = ['info@creandoweb.com.co']
+
+mixin infoLocation([icons])
+
+  .infoContainer
+    each item in icons
+      .infoContainer__wrapper
+        .infoContainer__wrapper_icon
+          img(src=imgPath+`${item[0]}`+".png")
+        .infoContainer__wrapper_texts
+          .infoContainer__wrapper_texts--title
+            .infoTitle
+              h3 #{item[1]}
+          .infoContainer__wrapper_texts--text
+            .infoText
+              if `${item[0]}`=="loc"
+                each val in ubicacion
+                  p= val
+              if `${item[0]}`=="ws"
+                each val in desarrollo
+                  p= val
+              if `${item[0]}`=="ph"
+                each val in comercial
+                  p= val
+              if `${item[0]}`=="em"
+                each val in correo
+                  p= val
+

@@ -1,0 +1,60 @@
+section.main
+  .main__make
+    .main__make_title
+      h2 QUE HACEMOS
+    .main__make_subtitle
+      h3 ITS Soluciones Tecnológicas
+    .main__make_phrase
+      p #[spam.bigBold " ]Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet #[spam.bigBold "]
+    .main__make_services
+      //- .main__make_services--icon
+      //-   i.icon.fa.fa-code
+      //- .main__make_services--title
+      //-   h4 Desarrollo de Software
+      //- .main__make_services--content
+      //-   p Expertos en desarrollo de aplicaciones móviles y de escritorio, donde la innovación y la creatividad nos permiten proporcionar soluciones de primer nivel según sus necesidades.
+      //- .main__make_services--callBtn
+      //-   a(href="#" target="blank") SOFTWARE
+      +cardSingle(
+        [
+          ["code", "Desarrollo de software", "Expertos en desarrollo de aplicaciones móviles y de escritorio, donde la innovación y la creatividad nos permiten proporcionar soluciones de primer nivel según sus necesidades.", "SOFTWARE"],
+          ["laptop-code", "Diseño y desarrollo WEB", "Diseñamos, programamos o rediseñamos su sitio web, bajo estándares de calidad propias de las exigencias actuales de escalabilidad, usabilidad y confianza.", "DISEÑO WEB"],
+          ["compass", "Monitoreo y Localización", "Seguridad móvil para transporte público y provado por medio de dispositivos de última generación, asegurando a su empresa y clientes de la mayor seguridad en sus desplazamientos.", "CATÁLOGO"]
+        ]
+      )
+  .main__partners
+    .main__partners_title
+      h2 NUESTROS ALIADOS COMERCIALES
+    .main__partners_card
+  .main__corporate
+    .main__corporate_title
+      h2 ITS SOLUCIONES
+    .main__corporate_card
+      +infoSingle(
+        [
+          ["SOMOS", "ITS Solutions S.A.S es una empresa Colombiana que tiene como objetivo principla ofrecer a las organizaciones soluciones tecnológicas basadas en el desarrollo de software, la investigación de nuevos productos y tendencias, la asesoría y acompañamiento en la implementación de soluciones de forma presencial y/o virtual, además de la comercialización de productos propios o de terceros."],
+          ["COMPROMISO", "Ser reconocida en el mediano plazo como una seria alternativa en el desarrollo de soluciones tecnológicas con presencia en el eje cafetero y con proyección nacional e internacional."],
+          ["PROPÓSITO","Contribuir a que otras organizaciones sean más produtivasobteniendo clientes más satisfechos a través de la innovación de desarrollos de software e implementación de soluciones tecnológicas en hardware y conectividad, de tal manera que puedan evidenciar resultados eficaces en sus procesos."]
+        ]
+      )
+  .main__work
+    .main__work_title
+      h2 METODOLOGÍA DE TRABAJO
+    .main__work_steps
+      +infoSteps(
+        [
+          ["comments", "1.", "Conocimiento de la problemática y recolección de información"],
+          ["chess", "2.", "Formulación"],
+          ["drafting-compass", "3.", "Desarrollo"],
+          ["globe", "4.", "Implementación"]
+        ]
+      )
+  .main__security
+    .main__security_title
+      h2 SEGURIDAD MÓVIL
+    .main__security_subtitle
+      h3 Trayectos seguros en el transporte público y privado.
+    .main__security_text
+      p “Software para dispositivos móviles y centros de datos de licenciamieto propio que facilita la escabilidad en el servicio.”
+section.footer
+

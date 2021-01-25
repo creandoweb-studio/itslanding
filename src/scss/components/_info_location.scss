@@ -1,0 +1,177 @@
+.infoContainer{
+  // background-color: indigo;
+  width: 100%;
+  @include centerGrid;
+  flex-wrap: wrap;
+  &__wrapper{
+    // background-color: red;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    &_icon{
+      // background-color: rgb(240, 188, 140);
+      height: 100%;
+      grid-column: 1 / 2;
+      padding: .5rem;
+      @include centerFlex;
+
+      img{
+        // background-color: lightsteelblue;
+        width: 80%;
+      }
+    }
+    &_texts{
+      // background-color: yellowgreen;
+      // height: 100%;
+      grid-column: 2 / 3;
+      padding: .5rem;
+
+      &--title{
+      // background-color: fuchsia;
+
+        .infoTitle{
+          h3{
+            color: $primario3;
+          }
+        }
+      }
+      &--text{
+        // background-color: gold;
+      }
+    }
+  }
+
+}
+
+// ================================================================
+// ======================= MEDIA QUERIES ==========================
+// ================================================================
+// ================================================================
+// ======================= 320 => 479 ===========================
+// ================================================================
+@include mQ(xsS){
+
+}
+// ================================================================
+// ======================= 480 => 599 ===========================
+// ================================================================
+@include mQ(smallS){
+
+}
+// ================================================================
+// ======================= 600 => 759 ===========================
+// ================================================================
+@include mQ(mediumS){
+  .infoContainer{
+    // background-color: indigo;
+    // width: 100%;
+    // @include centerGrid;
+    flex-wrap: wrap;
+    &__wrapper{
+      // background-color: red;
+      // width: 100%;
+      // display: grid;
+      grid-template-columns: 30% 70%;
+      &_icon{
+        // background-color: rgb(240, 188, 140);
+        // height: 100%;
+        // grid-column: 1 / 2;
+        // padding: .5rem;
+        // @include centerFlex;
+
+        img{
+          // background-color: lightsteelblue;
+          // width: 80%;
+        }
+      }
+      &_texts{
+        // background-color: yellowgreen;
+        // height: 100%;
+        // grid-column: 2 / 3;
+        // padding: .5rem;
+
+        &--title{
+        // background-color: fuchsia;
+
+          .infoTitle{
+            h3{
+              // color: $primario3;
+            }
+          }
+        }
+        &--text{
+          // background-color: gold;
+        }
+      }
+    }
+
+  }
+}
+// ================================================================
+// ======================= 760 => 919 ===========================
+// ================================================================
+@include mQ(wideS){
+
+}
+// ================================================================
+// ======================= 920 => 1199 ===========================
+// ================================================================
+@include mQ(largeS){
+  .infoContainer{
+    // background-color: indigo;
+    // width: 100%;
+    // @include centerGrid;
+    // flex-wrap: wrap;
+    &__wrapper{
+      // background-color: red;
+      // width: 100%;
+      // display: grid;
+      grid-template-columns: 20% 80%;
+      align-items: center;
+      &_icon{
+        // background-color: rgb(240, 188, 140);
+        height: 90%;
+        // grid-column: 1 / 2;
+        // padding: .5rem;
+        // @include centerFlex;
+
+        img{
+          // background-color: lightsteelblue;
+          width: 90%;
+        }
+      }
+      &_texts{
+        // background-color: yellowgreen;
+        // height: 100%;
+        // grid-column: 2 / 3;
+        // padding: .5rem;
+
+        &--title{
+        // background-color: fuchsia;
+
+          .infoTitle{
+            h3{
+              // color: $primario3;
+            }
+          }
+        }
+        &--text{
+          // background-color: gold;
+        }
+      }
+    }
+
+  }
+}
+// ================================================================
+// ======================= 1200 => 1399 ===========================
+// ================================================================
+@include mQ(xlS){
+
+}
+// ================================================================
+// ======================= 1400 =>  ===========================
+// ================================================================
+@include mQ(opS){
+
+}

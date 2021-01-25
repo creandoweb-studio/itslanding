@@ -1,0 +1,414 @@
+:root {
+  /* Animation Timing Function */
+  --primary-timing-func: cubic-bezier(0.86, 0, 0.07, 1);
+  /* Button Variables */
+  --button-radius: 50px;
+  --button-inner-ring-radius: 120px;
+  --button-outer-ring-radius: 100px;
+  --button-gradient: -20deg, rgb(184, 23, 108) 0%, rgba(243,48,224,1) 100%;
+  --button-bg-color: #f330e0;
+  --main-background-color: #1d1d1b;
+  /* Menu Variables */
+  --menu-radius: calc(var(--button-radius) - 2px);
+  --menu-height: 350px;
+  --menu-width: 60px;
+  --menu-border-radius: 10px;
+  --menu-bg-color: -20deg, rgba(20,7,53,1) 0%, rgba(106,54,217,1) 50%, rgba(205,107,230,1) 100%;
+  --menu-timing-function: var(--primary-timing-func);
+  --menu-icon-size: 30px;
+/*   Close Icon */
+  --close-icon-timing-function: var(--primary-timing-func);
+}
+
+
+svg{
+  fill: #FFFFFF;
+}
+
+.sticky-menu-container{
+  position: fixed;
+  right: 10%;
+  bottom: calc(var(--button-radius)/1.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.sticky-menu-container .outer-button{
+  position: absolute;
+  height: var(--button-radius, 70px);
+  width: var(--button-radius, 70px);
+  border-radius: 50%;
+  // background: rgb(244,87,116);
+  background: -moz-linear-gradient(var(--button-gradient));
+  background: -webkit-linear-gradient(var(--button-gradient));
+  background: linear-gradient(var(--button-gradient));
+  // background-color: var(--button-bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 10px 10px 18px 5px rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+.sticky-menu-container .outer-button .icon-container{
+  height: inherit;
+  width: inherit;
+  border-radius: inherit;
+  display: inherit;
+  align-items: inherit;
+  justify-content: inherit;
+  overflow: hidden;
+  position: relative;
+  cursor: inherit;
+}
+.sticky-menu-container .outer-button .close-icon{
+  transform: scale(0) rotate(-270deg);
+  opacity: 0;
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  fill: #FFFFFF;
+}
+
+.sticky-menu-container .outer-button .arrow-icon{
+  height: 35px;
+  width: 35px;
+  position: absolute;
+  fill: #FFFFFF;
+}
+
+.sticky-menu-container .outer-button .arrow-icon.hiding-spot{
+transform: translateX(calc(var(--button-radius) / -2)) translateY(calc(var(--button-radius) / 2));
+  opacity: 0;
+}
+
+.sticky-menu-container .outer-button .close-icon.show{
+  animation-duration: 500ms;
+  animation-name: close-in;
+  animation-fill-mode: forwards;
+  animation-timing-function: var(--close-icon-timing-function);
+}
+
+.sticky-menu-container .outer-button .close-icon.hide{
+  animation-duration: 1000ms;
+  animation-name: close-out;
+  animation-timing-function: var(--close-icon-timing-function);
+}
+
+.sticky-menu-container .outer-button .arrow-icon.show{
+  opacity: 0;
+  animation-duration: 1000ms;
+  animation-name: close-in;
+  animation-fill-mode: forwards;
+  animation-timing-function: var(--close-icon-timing-function);
+/*   animation-delay: 250ms; */
+}
+
+.sticky-menu-container .outer-button .arrow-icon.hide{
+  animation-duration: 1000ms;
+  animation-name: close-out;
+  animation-fill-mode: forwards;
+  animation-timing-function: var(--close-icon-timing-function);
+}
+
+.sticky-menu-container .outer-button::after, sticky-menu-container.outer-button::before{
+  position: absolute;
+  display: inline-block;
+  content: "";
+  height: var(--button-inner-ring-radius);
+  width: var(--button-inner-ring-radius);
+  border-radius: 50%;
+  background-color:transparent;
+  border: 0px solid rgba(255,255,255,0.5);
+  opcacity: 0;
+  cursor: pointer;
+}
+
+.sticky-menu-container .outer-button.clicked::after{
+  animation-duration: 500ms;
+  animation-name: touch-click-inner;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.sticky-menu-container .outer-button::before{
+  height: var(--button-outer-ring-radius);
+  width: var(--button-outer-ring-radius);
+}
+
+.sticky-menu-container .outer-button.clicked::before{
+  animation-name: touch-click-outer;
+  animation-duration: 500ms;
+  animation-iteration-count: 1;
+  animation-delay: 250ms;
+}
+
+.sticky-menu-container .inner-menu{
+  position: absolute;
+  height: var(--menu-height);
+  width: var(--menu-width);
+  border-radius: var(--menu-border-radius);
+/*   background: linear-gradient(var(--menu-bg-color)); */
+  background: -moz-linear-gradient(var(--menu-bg-color));
+  background: -webkit-linear-gradient(var(--menu-bg-color));
+  background: linear-gradient(var(--menu-bg-color));
+/*   transform: translate(calc(-50% + var(--button-radius) / 2), calc(-55% - var(--button-radius) / 2)); */
+  transform: translateX(0px) translateY(-220px);
+  transition: all 1000ms cubic-bezier(0.86, 0, 0.07, 1);
+/*   transition-delay: 500ms; */
+  padding: 15px;
+  overflow: hidden;
+  box-shadow: 10px 10px 18px 5px rgba(106,54,217,0.4);
+}
+
+.sticky-menu-container .inner-menu > ul{
+  height: 100%;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.sticky-menu-container .inner-menu > .menu-list > .menu-item{
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.sticky-menu-container .inner-menu > .menu-list > .menu-item{
+  overflow: hidden;
+}
+
+.sticky-menu-container .inner-menu > .menu-list > .menu-item > .item-icon{
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sticky-menu-container .inner-menu > .menu-list > .menu-item > .item-icon > svg{
+  height: var(--menu-icon-size);
+  width: var(--menu-icon-size);
+}
+
+.sticky-menu-container .inner-menu.closed{
+  height: var(--menu-radius);
+  width: var(--menu-radius);
+  border-radius: 50%;
+  padding:0;
+  transform: unset;
+}
+
+.sticky-menu-container .inner-menu > .menu-list > .menu-item > .item-text{
+  opacity: 0;
+}
+
+.sticky-menu-container .inner-menu > .menu-list > .menu-item > .item-text.text-in{
+  animation-duration: 1000ms;
+  animation-name: text-in;
+  animation-fill-mode: forwards;
+  animation-timing-function: var(--close-icon-timing-function);
+}
+
+.sticky-menu-container .inner-menu > .menu-list > .menu-item.text-hides{
+  animation-duration: 200ms;
+  animation-name: text-hides;
+  animation-fill-mode: forwards;
+  animation-timing-function: var(--close-icon-timing-function);
+}
+
+@keyframes touch-click-inner {
+  50%{
+      transform: scale(0.375);
+      border-width: 30px;
+      opacity: 1;
+  }
+  100%{
+      transform: scale(1);
+      border-width: 1px;
+      opacity: 0;
+  }
+}
+
+@keyframes touch-click-outer {
+  0%{
+    border-width: 10px;
+    opacity: 0;
+  }
+  50%{
+    opacity: 0.2;
+  }
+  100%{
+      transform: scale(1.1);
+      opacity: 0;
+  }
+}
+
+@keyframes close-in{
+  0%{
+    transform: scale(0) rotate(270deg);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes close-out{
+  0%{
+    transform: scale(1.1) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0) rotate(270deg);
+    opacity: 0;
+  }
+}
+
+@keyframes close-out2{
+  0%{
+    transform: scale(1.1) rotate(270deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0) rotate(0deg);
+    opacity: 0;
+  }
+}
+
+
+@keyframes arrow-out{
+  0%{
+    transform: translateX(0) translateY(0);
+  }
+  100%{
+    transform: translateX(calc(var(--button-radius) / 1.5)) translateY(calc(var(--button-radius) / -1.5));
+  }
+}
+
+@keyframes arrow-in{
+  0%{
+    transform: translateX(calc( -1 * var(--button-radius))) translateY(calc(var(--button-radius)));
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes text-in{
+  0%{
+    opcaity: 1;
+    transform: translateY(50px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes text-hides{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+
+// ================================================================
+// ======================= MEDIA QUERIES ==========================
+// ================================================================
+// ================================================================
+// ======================= 320 => 479 ===========================
+// ================================================================
+@include mQ(xsS){
+  body{
+    // background-color: blue;
+  }
+}
+// ================================================================
+// ======================= 480 => 599 ===========================
+// ================================================================
+@include mQ(smallS){
+  body{
+    // background-color: orange;
+  }
+}
+// ================================================================
+// ======================= 600 => 759 ===========================
+// ================================================================
+@include mQ(mediumS){
+  body{
+    // background-color: pink;
+  }
+  .sticky-menu-container{
+    // position: fixed;
+    right: 5%;
+    // bottom: calc(var(--button-radius)/1.5);
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // z-index: 100;
+  }
+
+}
+// ================================================================
+// ======================= 760 => 919 ===========================
+// ================================================================
+@include mQ(wideS){
+  body{
+    // background-color: violet;
+  }
+}
+// ================================================================
+// ======================= 920 => 1199 ===========================
+// ================================================================
+@include mQ(largeS){
+  body{
+    // background-color: red;
+  }
+  .sticky-menu-container{
+    // position: fixed;
+    right: 4%;
+    // bottom: calc(var(--button-radius)/1.5);
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // z-index: 100;
+  }
+}
+// ================================================================
+// ======================= 1200 => 1399 ===========================
+// ================================================================
+@include mQ(xlS){
+  body{
+    // background-color: green;
+  }
+}
+// ================================================================
+// ======================= 1400 =>  ===========================
+// ================================================================
+@include mQ(opS){
+  body{
+    // background-color: gold;
+  }
+  .sticky-menu-container{
+    // position: fixed;
+    right: 3%;
+    // bottom: calc(var(--button-radius)/1.5);
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // z-index: 100;
+  }
+}

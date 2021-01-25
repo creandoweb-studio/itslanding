@@ -1,0 +1,17 @@
+-imgPath='../images/'
+
+mixin section_service (services)
+    section.services-section
+            .inner-width
+                .services.owl-carousel
+                    each item in services
+                        .service
+                            .service-icon(class=`${item[0]}`)
+                                //- i(class=`${item[1]}` class="fa-"+`${item[2]}`)
+                                img.service-img(src=imgPath+`${item[0]}`+".png", alt=item[0], width="400")
+                            .service-name(class=`${item[0]}`)
+                                a(href="#" target="blanck")
+                                    h2.strong1 #{item[1]} #[strong #{item[2]}]
+                            .service-border(class=`${item[0]}`)
+                            .service-desc
+                                p #{item[3]}

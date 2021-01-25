@@ -1,0 +1,29 @@
+-imgPath='images/'
+
+//- mixin card(data, ruta, textoHa, textoHb, infoTitle, infoEmphasis, infoText, resalte)
+//-   //- .container
+//-   .card
+//-     .imgBx(data-text=`${data}`)
+//-       img(src=imgPath+`${ruta}`)
+//-     .content
+//-       div
+//-         h3 #{textoHa} #[span.pink #{textoHb}]
+//-         P.infoTitle #{infoTitle}
+//-         p.infoEmphasis #{infoEmphasis}
+//-         p.infoText #{infoText}
+//-         a(href="#") #{resalte}
+
+mixin card(employees)
+  .container
+    each item in employees
+      .card
+        .imgBx(data-text=`${item[0]}`)
+          img(src=imgPath+`${item[1]}`+".png")
+        .content
+          div
+            h3 #{item[2]} #[span.pink #{item[3]}]
+            P.infoTitle #{item[4]}
+            p.infoEmphasis #{item[5]}
+            p.infoText #{item[6]}
+            a(href="#") #{item[7]}
+

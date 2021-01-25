@@ -1,0 +1,9 @@
+mixin infoSteps (info)
+  each item in info
+    .main__work_steps--items
+      .main__work_steps--items-icon
+        i.fa(class="fa-"+`${item[0]}`)
+      .main__work_steps--items-number
+        h3.stepNumber #{item[1]}
+      .main__work_steps--items-content
+        p.stepContent #{item[2]}
