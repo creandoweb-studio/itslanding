@@ -1,11 +1,12 @@
 mixin cardSingle(info)
   each item in info
-    .main__make_services--items(class=`${item[0]}`)
-      .main__make_services--items-icon
-        i.fa(class="fa-"+`${item[0]}`)
-      .main__make_services--items-title
-        h4 #{item[1]}
-      .main__make_services--items-content
-        p #{item[2]}
-      .main__make_services--items-callBtn
-        a(href="#" target="blank") #{item[3]}
+    .main__make_services--container
+      .main__make_services--container-box
+        .icon
+          i.fa(class="fa-"+`${item[0]}`)
+        .title
+          h4 #{item[1]}
+        .content
+          p #{item[2]}
+        .callBtn
+          a(href="#" target="blank") #{item[3]}

@@ -1,0 +1,35 @@
+.hero__image_banner{
+    width:85vw;
+    height:60vh;
+    background:$primario2;
+    position:relative;
+    top:100px;
+    left:5%;
+    overflow:hidden;
+    &--slider{
+        width:100%;
+        height:100vh;
+        position:absolute;
+        top:-45%;
+        filter:blur(3px);
+        filter:saturate(3);
+        // filter:hue-rotate(90deg);
+        // filter:brightness(2);
+        // filter:opacity(90%);
+        #slideImg{
+            width:100%;
+            height:100%;
+            filter:opacity(50%);
+            // filter:hue-rotate(90deg);
+
+        }
+    }
+    .overlay{
+        width:100%;
+        height:100vh;
+        background:linear-gradient(rgba(20, 7, 53,0.7), rgba(20, 7, 53,0.7));
+        // background:linear-gradient(var(--bgGradientPrimAlpha));
+        position:absolute;
+        top:0;
+    }
+}

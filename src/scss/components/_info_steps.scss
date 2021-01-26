@@ -14,7 +14,8 @@
         justify-content:center;
         alig-items:center;
         margin:20px;
-        box-shadow: 0 20px 50px rgba(34, 58, 89, 0.2);
+        // box-shadow: 0 20px 50px rgba(34, 58, 89, 0.2);
+        box-shadow:0px 10px 35px rgba(28, 7, 85, 0.2);
         overflow:hidden;
         &::before{
             content:'';

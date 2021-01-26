@@ -1,12 +1,13 @@
 import navigationOffCanvas from './components/navigation_off_canvas'
 import transparentHeader from './components/transparent_header'
-import slid from './components/slid'
-import floatButton from './components/float_button'
+import scrollProgress from './components/scroll_progress'
+import bgImage from './components/bgImage'
 
-floatButton()
+bgImage()
+scrollProgress()
 navigationOffCanvas()
 transparentHeader()
-slid()
+
 
 
 

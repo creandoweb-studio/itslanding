@@ -24,13 +24,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" charset="utf-8"></script>
-    <script src="./email_validation.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="js/owl.carousel.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link rel="stylesheet" href="./style.css">
   </head>
-  <body>
+  <body onload="slider()">
     <section class="wrapper">
+      <div id="preogressbar"></div>
+      <div id="scrollpath"></div>
+      <div id="percent"></div>
       <section class="Header">
         <section class="Header-container">
           <h1 class="Logo"><a class="Logo-link" href="./">ITS Solutions</a></h1><a class="Panel-button" href="#">
@@ -47,10 +51,14 @@
           </aside>
         </section>
       </section>
-      <section class="hero">
+      <section class="hero" onload="slider()">
+        <div class="hero__image_banner">
+          <div class="hero__image_banner--slider"><img src="../images/img1.jpg" id="slideImg"></div>
+          <div class="overlay"></div>
+        </div>
         <div class="hero__containerLogo">
           <div class="hero__containerLogo_box">
-            <div class="hero__containerLogo_box--logo"><img src="images/logoNegativo.svg"></div>
+            <div class="hero__containerLogo_box--logo"><img src="../images/logoNegativo.svg"></div>
           </div>
         </div>
         <div class="hero__text">
@@ -86,35 +94,41 @@
             </p>
           </div>
           <div class="main__make_services">
-            <div class="main__make_services--items code">
-              <div class="main__make_services--items-icon"><i class="fa fa-code"></i></div>
-              <div class="main__make_services--items-title">
-                <h4>Desarrollo de software</h4>
+            <div class="main__make_services--container">
+              <div class="main__make_services--container-box">
+                <div class="icon"><i class="fa fa-code"></i></div>
+                <div class="title">
+                  <h4>Desarrollo de software</h4>
+                </div>
+                <div class="content">
+                  <p>Expertos en desarrollo de aplicaciones móviles y de escritorio, donde la innovación y la creatividad nos permiten proporcionar soluciones de primer nivel según sus necesidades.</p>
+                </div>
+                <div class="callBtn"><a href="#" target="blank">SOFTWARE</a></div>
               </div>
-              <div class="main__make_services--items-content">
-                <p>Expertos en desarrollo de aplicaciones móviles y de escritorio, donde la innovación y la creatividad nos permiten proporcionar soluciones de primer nivel según sus necesidades.</p>
-              </div>
-              <div class="main__make_services--items-callBtn"><a href="#" target="blank">SOFTWARE</a></div>
             </div>
-            <div class="main__make_services--items laptop-code">
-              <div class="main__make_services--items-icon"><i class="fa fa-laptop-code"></i></div>
-              <div class="main__make_services--items-title">
-                <h4>Diseño y desarrollo WEB</h4>
+            <div class="main__make_services--container">
+              <div class="main__make_services--container-box">
+                <div class="icon"><i class="fa fa-laptop-code"></i></div>
+                <div class="title">
+                  <h4>Diseño y desarrollo WEB</h4>
+                </div>
+                <div class="content">
+                  <p>Diseñamos, programamos o rediseñamos su sitio web, bajo estándares de calidad propias de las exigencias actuales de escalabilidad, usabilidad y confianza.</p>
+                </div>
+                <div class="callBtn"><a href="#" target="blank">DISEÑO WEB</a></div>
               </div>
-              <div class="main__make_services--items-content">
-                <p>Diseñamos, programamos o rediseñamos su sitio web, bajo estándares de calidad propias de las exigencias actuales de escalabilidad, usabilidad y confianza.</p>
-              </div>
-              <div class="main__make_services--items-callBtn"><a href="#" target="blank">DISEÑO WEB</a></div>
             </div>
-            <div class="main__make_services--items compass">
-              <div class="main__make_services--items-icon"><i class="fa fa-compass"></i></div>
-              <div class="main__make_services--items-title">
-                <h4>Monitoreo y Localización</h4>
+            <div class="main__make_services--container">
+              <div class="main__make_services--container-box">
+                <div class="icon"><i class="fa fa-compass"></i></div>
+                <div class="title">
+                  <h4>Monitoreo y Localización</h4>
+                </div>
+                <div class="content">
+                  <p>Seguridad móvil para transporte público y provado por medio de dispositivos de última generación, asegurando a su empresa y clientes de la mayor seguridad en sus desplazamientos.</p>
+                </div>
+                <div class="callBtn"><a href="#" target="blank">CATÁLOGO</a></div>
               </div>
-              <div class="main__make_services--items-content">
-                <p>Seguridad móvil para transporte público y provado por medio de dispositivos de última generación, asegurando a su empresa y clientes de la mayor seguridad en sus desplazamientos.</p>
-              </div>
-              <div class="main__make_services--items-callBtn"><a href="#" target="blank">CATÁLOGO</a></div>
             </div>
           </div>
         </div>
@@ -220,27 +234,27 @@
         <div class="main__contactUS">
           <div class="main__contactUS_container">
             <div class="box call">
-              <div class="imgBox"><img src="images/call.svg"/></div>
+              <div class="imgBox"><img src="../images/call.svg"/></div>
               <div class="content">
-                <div class="icon"><img src="images/call.svg"/></div>
+                <div class="icon"><img src="../images/call.svg"/></div>
                 <h3>Teléfono</h3>
                 <h4>033 333 33 33</h4>
                 <h4>310 301 30 30</h4>
               </div>
             </div>
             <div class="box email">
-              <div class="imgBox"><img src="images/email.svg"/></div>
+              <div class="imgBox"><img src="../images/email.svg"/></div>
               <div class="content">
-                <div class="icon"><img src="images/email.svg"/></div>
+                <div class="icon"><img src="../images/email.svg"/></div>
                 <h3>Email</h3>
                 <h4>as@as.as</h4>
                 <h4>otro@as.as</h4>
               </div>
             </div>
             <div class="box map">
-              <div class="imgBox"><img src="images/map.svg"/></div>
+              <div class="imgBox"><img src="../images/map.svg"/></div>
               <div class="content">
-                <div class="icon"><img src="images/map.svg"/></div>
+                <div class="icon"><img src="../images/map.svg"/></div>
                 <h3>Dirección</h3>
                 <h4>Calle 10 # 1 - 01</h4>
                 <h4>Manizales</h4>
@@ -250,7 +264,7 @@
         </div>
       </section>
       <section class="footer"></section>
-      <script src="./script.js"></script>
+      <script src="./script.js" type="text/javascript"></script>
       <script src="/node_modules/wowjs/dist/wow.min.js"></script>
       <script>new WOW().init();</script>
       <script>
@@ -262,7 +276,8 @@
         responsiveClass:true,
         responsive:{0:{ items:1 }, 600:{ items:2 }, 1000:{ items:3 } }
         });
-      </script>
+      </script><script>let slideImg = document.getElementById("slideImg"); let images = new Array( "images/img1.jpg", "images/img2.jpg"); console.log(slideImg);let len = images.length;let i = 0;function slider(){ if(i > len-1){ i = 0; } slideImg.src=images[i]; i++; setTimeout('slider()',3000); }
+</script>
     </section>
   </body>
 </html>

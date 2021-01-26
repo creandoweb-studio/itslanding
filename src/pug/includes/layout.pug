@@ -20,7 +20,7 @@ include ./components/info_contact.pug
 //- include ./components/slid/slidTitle.pug
 //- include ./components/slid/slidDescrip.pug
 //- include ./components/slid/slidControl.pug
-//- include ./components/section_services.pug
+include ./components/section_services.pug
 
 doctype html
 html(lang='es')
@@ -36,13 +36,24 @@ html(lang='es')
     script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" charset="utf-8")
-    script(src="./email_validation.js")
+    //- script(src="./email_validation.js")
+
+    script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js")
+    script(src="js/owl.carousel.js")
+
+
+
     link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css")
     link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css")
     link(rel="stylesheet", href="./style.css")
 
-  body
+  body(onload="slider()")
     section.wrapper
+      //- progress bar
+      #preogressbar
+      #scrollpath
+      #percent
+      //- menu
       +navigationOffCanvas([
         [pages[0], sites[0], ''],
         [pages[1], sites[1], ''],
@@ -52,7 +63,8 @@ html(lang='es')
 
       block content
 
-      script(src="./script.js")
+      script(src="./script.js" type="text/javascript")
+
 
       script(src="/node_modules/wowjs/dist/wow.min.js")
       script new WOW().init();
@@ -65,3 +77,17 @@ html(lang='es')
         | responsiveClass:true,
         | responsive:{0:{ items:1 }, 600:{ items:2 }, 1000:{ items:3 } }
         | });
+        //- | navigation : true,
+        //- | slideSpeed : 300,
+        //- | paginationSpeed : 400,
+        //- | singleItem:true,
+        //- //- // Navigation
+        //- | navigationText : ["Anterior","Siguiente"],
+        //- | rewindNav : true,
+        //- | scrollPerPage : true,
+        //- //- //Pagination
+        //- | pagination : true,
+        //- | paginationNumbers: false
+        //- | })
+      <script>let slideImg = document.getElementById("slideImg"); let images = new Array( "images/img1.jpg", "images/img2.jpg"); console.log(slideImg);let len = images.length;let i = 0;function slider(){ if(i > len-1){ i = 0; } slideImg.src=images[i]; i++; setTimeout('slider()',3000); }
+      </script>
