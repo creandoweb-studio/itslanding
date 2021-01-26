@@ -1,4 +1,44 @@
+.hero{
+    &__containerLogo{
+        &_box{
+            background:linear-gradient(var(--bgGradientPrim));
+            position:relative;
+            width:400px;
+            height: 70vh;
+            margin: 0 0 0 10%;
+            // display:flex;
+            // justify-content: center;
+            // align-items: center;
 
+            &--logo{
+                display:flex;
+                justify-content: center;
+                // align-items: center;
+                position:relative;
+                z-index:10;
+                img{
+                    max-width: 70%;
+                    margin: 40% 0 0 0;
+                }
+            }
+
+            &::before{
+                content:'';
+                position:absolute;
+                bottom:0;
+                left:0;
+                width:100%;
+                height:100%;
+                background:linear-gradient(var(--bgGradientPrim));
+                filter:blur(25px);
+                transform:translateY(30px) scale(0.95);
+                border-radius:40px;
+            }
+        }
+
+        
+    }
+}
 // ================================================================
 // ======================= MEDIA QUERIES ==========================
 // ================================================================
