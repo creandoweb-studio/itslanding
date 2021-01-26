@@ -1,6 +1,6 @@
-$header-bg-op-0:  rgba(27, 26, 28, 0);
-$header-bg-op-1: rgba(27, 26, 28, 1);
-$header-bg-op-2: rgba(27, 26, 28, 0);
+$header-bg-op-0:  rgba(34, 58, 89, 0.5);
+$header-bg-op-1: rgba(34, 58, 89,1);
+$header-bg-op-2: rgba(34, 58, 89,0);
 $header-color: $baseredes;
 $header-height: 4rem;
 $header-container-width: 1200px;
@@ -131,7 +131,7 @@ $hamburger-color2:$secundario;
 
   &-link {
     position:relative;
-    display: inline-block; 
+    display: inline-block;
     padding: 0.5rem 1rem;
     margin: 0 .5rem;
     font: {
