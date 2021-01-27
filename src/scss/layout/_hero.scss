@@ -1,4 +1,57 @@
-
+.square{
+  position:absolute;
+  right:0px;
+  width:55%;
+  height:1200px;
+  background:$primario2;
+  opacity:0.3;
+  z-index:0;
+}
+.square2{
+  position:absolute;
+  top:25%;
+  right:0px;
+  width:100%;
+  height:50%;
+  background:$primario;
+  opacity:0.3;
+  z-index:1;
+}
+.wrapper{
+  // background-color: goldenrod;
+  .square{
+  }
+  .container{
+    // background:red;
+    height:100vh;
+    display:grid;
+    grid-template-columns:repeat(12, 1fr);
+    grid-template-rows:repeat(12,1fr);
+    .hero__image_banner{
+      // background:orange;
+      grid-column: 1 / 12;
+      grid-row: 3 / 12;
+    }
+    .hero__containerLogo{
+      // background:green;
+      grid-column: 2 / 6;
+      grid-row: 1 / 11;
+      z-index: 5;
+    }
+    .hero__text{
+      // background-color: blue;
+      grid-column: 6 / 12;
+      grid-row: 4 / 7;
+      z-index: 4;
+    }
+    .hero__contacto{
+      // background-color: firebrick;
+      grid-column: 10 / 12;
+      grid-row: 10 / 12;
+      z-index: 3;
+    }
+  }
+}
 // ================================================================
 // ======================= MEDIA QUERIES ==========================
 // ================================================================

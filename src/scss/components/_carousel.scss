@@ -1,0 +1,24 @@
+.main__partners_card{
+  // background-color: aqua;
+  width: 100vw;
+  height: 30vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel{
+  // background:red;
+  width:100%;
+  // height: 100%;
+  .items{
+    display: flex;
+    justify-content: center;
+    height: 200px;
+  }
+  img{
+    // margin: 0 1rem;
+  }
+
+
+
+}

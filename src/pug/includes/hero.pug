@@ -1,22 +1,23 @@
 
 section.hero(onload="slider()")
-  .hero__image_banner
-    .hero__image_banner--slider
-      img(src=imgPath+"img1.jpg" id="slideImg")
-    .overlay
-  .hero__containerLogo
-    .hero__containerLogo_box
-      .hero__containerLogo_box--logo
-        img(src=imgPath+"logoNegativo.svg")
-  .hero__text
-    hero__text_title
-      h2 PROGRAMANDO
-    hero__text_emphasis
-      h4 Innovación / Confianza / Inteligencia
-    hero__text_subtitle
-      h2.focus SOLUCIONES REALES
-  .hero__contacto
-    hero__contacto_ask
-      p ¿Tiene un proyecto?
-    hero__contacto_call
-      a(href='#' target="blank") ¡Hablemos! #[i.icon.fa.fa-envelope]
+  .container
+    .hero__image_banner
+      .hero__image_banner--slider
+        img(src=imgPath+"img1.jpg" id="slideImg")
+      .overlay
+    .hero__containerLogo
+      .hero__containerLogo_box
+        .hero__containerLogo_box--logo
+          img(src=imgPath+"logoNegativo.svg")
+    .hero__text
+      .hero__text_title
+        h2 PROGRAMANDO
+      .hero__text_emphasis
+        h4 Innovación / Confianza / Inteligencia
+      .hero__text_subtitle
+        h2.focus SOLUCIONES REALES
+    .hero__contacto
+      .hero__contacto_ask
+        p ¿Tiene un proyecto?
+      .hero__contacto_call
+        a(href='#' target="blank") ¡Hablemos! #[i.icon.fa.fa-envelope]

@@ -1,4 +1,25 @@
-
+.main{
+  background:orange;
+  &__make{
+    background:blue;
+    
+  }
+  &__partners{
+    background:red;
+  }
+  &__corporate{
+    background:yellow;
+  }
+  &__work{
+    background:green;
+  }
+  &__security{
+    background:purple;
+  }
+  &__contactUS{
+    background:pink;
+  }
+}
 // ================================================================
 // ======================= MEDIA QUERIES ==========================
 // ================================================================

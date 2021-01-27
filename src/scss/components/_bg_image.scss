@@ -1,18 +1,17 @@
 .hero__image_banner{
-    width:85vw;
-    height:60vh;
+    width:100%;
+    height:100%;
     background:$primario2;
     position:relative;
-    top:100px;
-    left:5%;
+    // top:100px;
     overflow:hidden;
     &--slider{
-        width:100%;
-        height:100vh;
+        // width:100%;
+        // height:100%;
         position:absolute;
-        top:-45%;
-        filter:blur(3px);
-        filter:saturate(3);
+        top:-8%;
+        filter:blur(1px);
+        // filter:saturate(3);
         // filter:hue-rotate(90deg);
         // filter:brightness(2);
         // filter:opacity(90%);
@@ -20,13 +19,32 @@
             width:100%;
             height:100%;
             filter:opacity(50%);
+            // filter: saturate(2);
             // filter:hue-rotate(90deg);
-
+            animation: zoom 2.9s linear infinite;
+        }
+        @keyframes zoom {
+          0%
+          {
+            transform: scale(1.3);
+          }
+          15%
+          {
+            transform: scale(1);
+          }
+          85%
+          {
+            transform: scale(1);
+          }
+          100%
+          {
+            transform: scale(1.3);
+          }
         }
     }
     .overlay{
         width:100%;
-        height:100vh;
+        height:100%;
         background:linear-gradient(rgba(20, 7, 53,0.7), rgba(20, 7, 53,0.7));
         // background:linear-gradient(var(--bgGradientPrimAlpha));
         position:absolute;

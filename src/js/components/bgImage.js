@@ -6,7 +6,10 @@ export default function bgImage(){
 
   let images = new Array(
     "images/img1.jpg",
-    "images/img2.jpg"
+    "images/img2.jpg",
+    "images/img3.jpg",
+    "images/img4.jpg",
+    "images/img5.jpg"
   );
 
   // console.log(images.length)
