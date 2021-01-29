@@ -1,6 +1,6 @@
-$header-bg-op-0:  rgba(34, 58, 89, 0.5);
-$header-bg-op-1: rgba(34, 58, 89,1);
-$header-bg-op-2: rgba(34, 58, 89,0);
+$header-bg-op-0:  rgba(34, 58, 89, 0.9);
+$header-bg-op-1: rgba(34, 58, 89, 1);
+$header-bg-op-2: rgba(34, 58, 89, 0.9);
 $header-color: $baseredes;
 $header-height: 4rem;
 $header-container-width: 1200px;
@@ -51,6 +51,7 @@ $hamburger-color2:$secundario;
 .Header {
   position: fixed;
   z-index: 10000;
+  // right:0;
   width: 100%;
   height: $header-height;
   transition: all .3s ease-out;
@@ -138,7 +139,7 @@ $hamburger-color2:$secundario;
       weight: $medium;
       size: 1.5rem;
     }
-    color: $primario;
+    color: $baseredes;
     // background:orange;
     // letter-spacing:2px;
     text-decoration: none;

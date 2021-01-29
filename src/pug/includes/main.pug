@@ -5,7 +5,7 @@ section.main
     .main__make_subtitle
       h3 ITS Soluciones Tecnológicas
     .main__make_phrase
-      p #[spam.bigBold " ]Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet #[spam.bigBold "]
+      p #[i.icon(class="fa fa-angle-double-left")] Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut #[i.icon(class="fa fa-angle-double-right")]
     .main__make_services
       +cardSingle(
         [
@@ -19,21 +19,22 @@ section.main
       h2 NUESTROS ALIADOS COMERCIALES
     .main__partners_card
 
-      //- .carousel
-      //-   .items
-      //-     img(src=imgPath+"edicar.png")
-      //-   .items
-      //-     img(src=imgPath+"redatel.png")
-      //-   .items
-      //-     img(src=imgPath+"eya.png")
-      //-   .items
-      //-     img(src=imgPath+"derian.png")
-      //-   .items
-      //-     img(src=imgPath+"loque.png")
-      //-   .items
-      //-     img(src=imgPath+"viral.png")
+      .carousel
+        .items
+          img(src=imgPath+"edicar.png")
+        .items
+          img(src=imgPath+"redatel.png")
+        .items
+          img(src=imgPath+"eya.png")
+        .items
+          img(src=imgPath+"derian.png")
+        .items
+          img(src=imgPath+"loque.png")
+        .items
+          img(src=imgPath+"viral.png")
 
   .main__corporate
+
     .main__corporate_title
       h2 ITS SOLUCIONES
     .main__corporate_card

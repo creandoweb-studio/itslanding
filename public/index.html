@@ -38,10 +38,6 @@
     <section class="wrapper">
       <div class="square"></div>
       <div class="square2"></div>
-      <div id="preogressbar"></div>
-      <div id="scrollpath"></div>
-      <div id="percent"></div>
-      <menu></menu>
       <section class="Header">
         <section class="Header-container">
           <h1 class="Logo"><a class="Logo-link" href="./">ITS Solutions</a></h1><a class="Panel-button" href="#">
@@ -84,7 +80,7 @@
             <div class="hero__contacto_ask">
               <p>¿Tiene un proyecto?</p>
             </div>
-            <div class="hero__contacto_call"><a href="#" target="blank">¡Hablemos! <i class="icon fa fa-envelope"></i></a></div>
+            <div class="hero__contacto_call"><a href="#" target="blank">¡Hablemos!</a></div>
           </div>
         </div>
       </section>
@@ -97,10 +93,7 @@
             <h3>ITS Soluciones Tecnológicas</h3>
           </div>
           <div class="main__make_phrase">
-            <p>
-              <spam class="bigBold">" </spam>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet 
-              <spam class="bigBold">"</spam>
-            </p>
+            <p><i class="icon fa fa-angle-double-left"></i> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut <i class="icon fa fa-angle-double-right"></i></p>
           </div>
           <div class="main__make_services">
             <div class="main__make_services--container">
@@ -145,7 +138,16 @@
           <div class="main__partners_title">
             <h2>NUESTROS ALIADOS COMERCIALES</h2>
           </div>
-          <div class="main__partners_card"></div>
+          <div class="main__partners_card">
+            <div class="carousel">
+              <div class="items"><img src="../images/edicar.png"></div>
+              <div class="items"><img src="../images/redatel.png"></div>
+              <div class="items"><img src="../images/eya.png"></div>
+              <div class="items"><img src="../images/derian.png"></div>
+              <div class="items"><img src="../images/loque.png"></div>
+              <div class="items"><img src="../images/viral.png"></div>
+            </div>
+          </div>
         </div>
         <div class="main__corporate">
           <div class="main__corporate_title">
@@ -277,16 +279,6 @@
       <script src="/node_modules/wowjs/dist/wow.min.js"></script>
       <script>new WOW().init();</script>
       <script>
-        $(".services").owlCarousel({margin:20,
-        loop:true,
-        autoplay:true,
-        autoplayTimeout:2000,
-        autoplayHoverPause:true,
-        responsiveClass:true,
-        responsive:{0:{ items:1 }, 600:{ items:2 }, 1000:{ items:3 } }
-        })
-      </script>
-      <script>
         $('.carousel').slick({slidesToShow:3,
         slidesToScroll:1,
         autoplay: true,
@@ -319,7 +311,7 @@
           }
         ]
         })
-      </script><script>let slideImg = document.getElementById("slideImg"); let images = new Array( "images/img1.jpg", "images/img2.jpg", "images/img3.jpg", "images/img4.jpg", "images/img5.jpg");let len = images.length;let i = 0;function slider(){ if(i > len-1){ i = 0; } slideImg.src=images[i]; i++; setTimeout('slider()',3000); }</script>
+      </script><script>let slideImg = document.getElementById("slideImg"); let images = new Array( "images/img1.jpg", "images/img2.jpg", "images/img3.jpg", "images/img5.jpg");let len = images.length;let i = 0;function slider(){ if(i > len-1){ i = 0; } slideImg.src=images[i]; i++; setTimeout('slider()',3000); }</script>
     </section>
   </body>
 </html>

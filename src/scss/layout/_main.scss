@@ -1,23 +1,51 @@
 .main{
-  background:orange;
+  // background:orange;
   &__make{
-    background:blue;
-    
+    // background:blue;
+    height:100vh;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    &_title{
+      // background-color: aqua;
+      grid-column: 2 / 8;
+      grid-row: 1 / 3;
+    }
+    &_subtitle{
+      // background-color: salmon;
+      grid-column: 2 / 8;
+      grid-row: 3 / 4;
+    }
+    &_phrase{
+      // background-color: darkgreen;
+      grid-column: 8 / 12;
+      grid-row: 1 / 4;
+    }
+    &_services{
+      // background-color: firebrick;
+      grid-column: 1 / 13;
+      grid-row: 5 / 11;
+    }
   }
   &__partners{
-    background:red;
+    // background:red;
+    height: 50vh;
   }
   &__corporate{
-    background:yellow;
+    // background:yellow;
+    height: 60vh;
   }
   &__work{
-    background:green;
+    // background:green;
+    height: 50vh;
   }
   &__security{
-    background:purple;
+    // background:purple;
+    height: 50vh;
   }
   &__contactUS{
-    background:pink;
+    // background:pink;
+    height: 50vh;
   }
 }
 // ================================================================
@@ -37,7 +65,7 @@
 @include mQ(smallS){
   .main{
     // background-color: orange;
-    
+
   }
 }
 // ================================================================
