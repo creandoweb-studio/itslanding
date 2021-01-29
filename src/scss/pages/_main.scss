@@ -55,37 +55,38 @@
   }
   &__corporate{
     background:$primario;
-    margin:2% 0;
+    margin:2rem 0;
     @include centerFlex;
     flex-wrap:wrap;
     &_title{
       // background:violet;
-      // width:100vw;
-      // text-align:center;
+      width:100vw;
+      text-align:center;
       // margin-top:-5%;
       h2{
         color:$baseredes;
-        // font-size:4rem;
+        font-size:2rem;
       }
     }
     &_card{
       // background:pink;
-      // padding:1rem 3rem;
-      // margin-top:-12%;
-      // @include centerFlex;
+      padding:1rem 3rem;
+      margin: 1rem 0;
+      @include centerFlex;
+      flex-wrap: wrap;
       &--items{
-        // width: 25%;
-        // margin:0 1rem;
-        // align-self:start;
+        width: 100%;
+        margin:0 1rem;
+        align-self:start;
         &-title{
-          // padding:1rem 0;
-          // text-align:center;
+          padding:1rem 0;
+          text-align:center;
           h4{
             color:$baseredes;
           }
         }
         &-content{
-          // text-align:justify;
+          text-align:justify;
           p{
             color:$baseredes;
           }

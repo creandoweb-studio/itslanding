@@ -10251,9 +10251,6 @@ a {
   grid-column: 2/12;
   grid-row: 5/12;
 }
-.main__corporate {
-  height: 60vh;
-}
 .main__work {
   height: 50vh;
 }
@@ -11228,17 +11225,42 @@ a {
 }
 .main__corporate {
   background: #223a59;
-  margin: 2% 0;
+  margin: 2rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
+.main__corporate_title {
+  width: 100vw;
+  text-align: center;
+}
 .main__corporate_title h2 {
   color: #fdfbfd;
+  font-size: 2rem;
+}
+.main__corporate_card {
+  padding: 1rem 3rem;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.main__corporate_card--items {
+  width: 100%;
+  margin: 0 1rem;
+  align-self: start;
+}
+.main__corporate_card--items-title {
+  padding: 1rem 0;
+  text-align: center;
 }
 .main__corporate_card--items-title h4 {
   color: #fdfbfd;
+}
+.main__corporate_card--items-content {
+  text-align: justify;
 }
 .main__corporate_card--items-content p {
   color: #fdfbfd;
