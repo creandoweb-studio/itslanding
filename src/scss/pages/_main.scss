@@ -7,11 +7,13 @@
   // background:orange;
   &__make{
     // background:blue;
+    margin: 2rem 0;
     &_title{
       // background-color: aqua;
       @include centerFlex;
+
       h2{
-        font-size:5rem;
+        font-size:2.5rem;
       }
 
     }
@@ -21,12 +23,14 @@
     }
     &_phrase{
       // background-color: darkgreen;
+      margin: 1rem 2rem;
       @include centerFlex;
       p{
         font-style:italic;
+        text-align: center;
         .icon{
         // background:orange;
-        font-size:1.5rem;
+        // font-size:1.5rem;
         color:$primario;
         }
       }
@@ -160,6 +164,123 @@
 // ================================================================
 @include mQ(xlS){
 
+  .main{
+  // background:orange;
+  &__make{
+    // background:blue;
+    &_title{
+      // background-color: aqua;
+      @include centerFlex;
+      h2{
+        font-size:5rem;
+      }
+
+    }
+    &_subtitle{
+      // background-color: salmon;
+      @include centerFlex;
+    }
+    &_phrase{
+      // background-color: darkgreen;
+      @include centerFlex;
+      p{
+        font-style:italic;
+        .icon{
+        // background:orange;
+        font-size:1.5rem;
+        color:$primario;
+        }
+      }
+    }
+
+    &_services{
+      // background-color: firebrick;
+    }
+  }
+  &__partners{
+    // background:orange;
+    &_title{
+      // background:blue;
+      @include centerFlex;
+      h2{
+        font-size:4rem;
+      }
+    }
+    &_card{
+    }
+  }
+  &__corporate{
+    background:$primario;
+    margin:2% 0;
+    @include centerFlex;
+    flex-wrap:wrap;
+    &_title{
+      // background:violet;
+      width:100vw;
+      text-align:center;
+      margin-top:-5%;
+      h2{
+        color:$baseredes;
+        font-size:4rem;
+      }
+    }
+    &_card{
+      // background:pink;
+      padding:1rem 3rem;
+      margin-top:-12%;
+      @include centerFlex;
+      &--items{
+        width: 25%;
+        margin:0 1rem;
+        align-self:start;
+        &-title{
+          padding:1rem 0;
+          text-align:center;
+          h4{
+            color:$baseredes;
+          }
+        }
+        &-content{
+          text-align:justify;
+          p{
+            color:$baseredes;
+          }
+        }
+      }
+    }
+  }
+  &__work{
+    &_title{
+      @include centerFlex;
+      margin-bottom:2rem;
+      h2{
+        font-size:4rem;
+      }
+    }
+  }
+  &__security{
+    background-color:$primario2;
+    background-image: url("../../images/img2.jpg");
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+    text-align: center;
+    color:$baseredes;
+    &_title{
+      @include centerFlex;
+      h2{
+        font-size:4rem;
+        color:$baseredes;
+      }
+    }
+    &_subtitle{
+      h3{
+        color:$baseredes;
+        padding: 1.5rem 0;
+      }
+    }
+  }
+}
 }
 // ================================================================
 // ======================= 1400 =>  ===========================
