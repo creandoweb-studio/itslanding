@@ -10238,7 +10238,18 @@ a {
   }
 }
 .main__partners {
-  height: 50vh;
+  height: 70vh;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+}
+.main__partners_title {
+  grid-column: 2/12;
+  grid-row: 2/4;
+}
+.main__partners_card {
+  grid-column: 2/12;
+  grid-row: 5/12;
 }
 .main__corporate {
   height: 60vh;
@@ -10776,8 +10787,6 @@ a {
 }
 
 .main__partners_card {
-  width: 100vw;
-  height: 30vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10790,6 +10799,28 @@ a {
   display: flex;
   justify-content: center;
   height: 200px;
+}
+.carousel img {
+  margin: 0 2rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .main__partners_card {
+    width: 100vw;
+    height: 30vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .carousel {
+    width: 100%;
+  }
+  .carousel .items {
+    display: flex;
+    justify-content: center;
+    height: 200px;
+  }
 }
 .hamburger:focus {
   outline: 0;
@@ -11190,9 +11221,10 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 .main__partners_title h2 {
-  font-size: 4rem;
+  font-size: 2rem;
 }
 .main__corporate {
   background: #223a59;
@@ -11202,36 +11234,11 @@ a {
   align-items: center;
   flex-wrap: wrap;
 }
-.main__corporate_title {
-  width: 100vw;
-  text-align: center;
-  margin-top: -5%;
-}
 .main__corporate_title h2 {
   color: #fdfbfd;
-  font-size: 4rem;
-}
-.main__corporate_card {
-  padding: 1rem 3rem;
-  margin-top: -12%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.main__corporate_card--items {
-  width: 25%;
-  margin: 0 1rem;
-  align-self: start;
-}
-.main__corporate_card--items-title {
-  padding: 1rem 0;
-  text-align: center;
 }
 .main__corporate_card--items-title h4 {
   color: #fdfbfd;
-}
-.main__corporate_card--items-content {
-  text-align: justify;
 }
 .main__corporate_card--items-content p {
   color: #fdfbfd;

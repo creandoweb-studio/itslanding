@@ -29,7 +29,20 @@
   }
   &__partners{
     // background:red;
-    height: 50vh;
+    height: 70vh;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12,1fr);
+    &_title{
+      // background-color: forestgreen;
+      grid-column: 2 / 12;
+      grid-row: 2 / 4;
+    }
+    &_card{
+      // background-color: royalblue;
+      grid-column: 2 / 12;
+      grid-row: 5 / 12;
+    }
   }
   &__corporate{
     // background:yellow;
