@@ -10252,6 +10252,7 @@ a {
   grid-row: 5/12;
 }
 .main__security {
+  background: purple;
   height: 50vh;
 }
 .main__contactUS {
@@ -11290,11 +11291,12 @@ a {
   align-items: center;
 }
 .main__security_title h2 {
-  font-size: 4rem;
+  font-size: 2rem;
   color: #fdfbfd;
 }
 .main__security_subtitle h3 {
   color: #fdfbfd;
+  font-size: 1rem;
   padding: 1.5rem 0;
 }
 

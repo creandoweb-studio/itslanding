@@ -113,13 +113,14 @@
     &_title{
       @include centerFlex;
       h2{
-        font-size:4rem;
+        font-size:2rem;
         color:$baseredes;
       }
     }
     &_subtitle{
       h3{
         color:$baseredes;
+        font-size: 1rem;
         padding: 1.5rem 0;
       }
     }
