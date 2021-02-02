@@ -1,5 +1,5 @@
 section.main
-  .main__make
+  .main__make#servicios
     .main__make_title
       h2 QUE HACEMOS
     .main__make_subtitle
@@ -9,12 +9,12 @@ section.main
     .main__make_services
       +cardSingle(
         [
-          ["code", "Desarrollo de software", "Expertos en desarrollo de aplicaciones móviles y de escritorio, donde la innovación y la creatividad nos permiten proporcionar soluciones de primer nivel según sus necesidades.", "SOFTWARE"],
-          ["laptop-code", "Diseño y desarrollo WEB", "Diseñamos, programamos o rediseñamos su sitio web, bajo estándares de calidad propias de las exigencias actuales de escalabilidad, usabilidad y confianza.", "DISEÑO WEB"],
-          ["compass", "Monitoreo y Localización", "Seguridad móvil para transporte público y provado por medio de dispositivos de última generación, asegurando a su empresa y clientes de la mayor seguridad en sus desplazamientos.", "CATÁLOGO"]
+          ["code", "Desarrollo de software", "Expertos en desarrollo de aplicaciones móviles y de escritorio, donde la innovación y la creatividad nos permiten proporcionar soluciones de primer nivel según sus necesidades.", "SOFTWARE", "software"],
+          ["laptop-code", "Diseño y desarrollo WEB", "Diseñamos, programamos o rediseñamos su sitio web, bajo estándares de calidad propias de las exigencias actuales de escalabilidad, usabilidad y confianza.", "DISEÑO WEB", "disenioWSeb"],
+          ["compass", "Monitoreo y Localización", "Seguridad móvil para transporte público y provado por medio de dispositivos de última generación, asegurando a su empresa y clientes de la mayor seguridad en sus desplazamientos.", "CATÁLOGO", "catalogo"]
         ]
       )
-  .main__partners
+  .main__partners#proyectos
     .main__partners_title
       h2 NUESTROS ALIADOS COMERCIALES
     .main__partners_card
@@ -33,7 +33,7 @@ section.main
         .items
           img(src=imgPath+"viral.png")
 
-  .main__corporate
+  .main__corporate#nosotros
 
     .main__corporate_title
       h2 ITS SOLUCIONES

@@ -1,0 +1,42 @@
+main{
+  background:purple;
+  .proyects{
+    background:orange;
+    display:grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    height:100vh;
+    &__imgs{
+      background:pink;
+      grid-column: 2 / 6;
+      grid-row: 3 / 12;
+    }
+    &__content{
+      background:violet;
+      grid-column: 6 / 12;
+      grid-row: 3 / 12;
+    }
+  }
+  .transport{
+    background:blue;
+    height:100vh;
+    display:grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    &__content{
+      background:red;
+      grid-column: 2 / 6;
+      grid-row: 2 / 8;
+    }
+    &__call{
+      background:green;
+      grid-column: 2 / 6;
+      grid-row: 8 / 12;
+    }
+    &__imgs{
+      background:yellow;
+      grid-column: 6 / 12;
+      grid-row: 2 / 12;
+    }
+  }
+}

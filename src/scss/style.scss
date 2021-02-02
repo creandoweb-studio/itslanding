@@ -26,6 +26,7 @@
 @import
 './layout/hero',
 './layout/main',
+'./layout/software',
 './layout/_grid.scss';
 
 // // carpeta components
@@ -51,4 +52,5 @@
 // carpeta pages
 @import
 './pages/hero',
-'./pages/main';
+'./pages/main',
+'./pages/software';
