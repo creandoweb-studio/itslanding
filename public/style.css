@@ -10251,9 +10251,6 @@ a {
   grid-column: 2/12;
   grid-row: 5/12;
 }
-.main__work {
-  height: 50vh;
-}
 .main__security {
   height: 50vh;
 }
@@ -10388,21 +10385,22 @@ a {
 }
 
 .main__work_container {
-  width: 100vw;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  margin: 1rem;
 }
 .main__work_container--card {
   background: rgba(34, 58, 89, 0.04);
   position: relative;
-  width: 200px;
+  width: 250px;
   height: 200px;
   display: flex;
   justify-content: center;
-  alig-items: center;
-  margin: 20px;
+  align-items: center;
+  margin: 1rem;
   box-shadow: 0px 10px 35px rgba(28, 7, 85, 0.2);
   overflow: hidden;
 }
@@ -10417,12 +10415,13 @@ a {
   pointer-events: none;
 }
 .main__work_container--card-content {
-  padding: 30px;
+  padding: 1.5rem;
   text-align: center;
 }
 .main__work_container--card-content .number {
-  position: absolute;
-  right: 15px;
+  position: relative;
+  right: -50%;
+  top: 1rem;
   font-weight: 800;
   z-index: 1;
   transition: 0.5s;
@@ -10430,11 +10429,11 @@ a {
 .main__work_container--card-content .number h3 {
   color: #7744d8;
   opacity: 0.2;
-  font-size: 4rem;
+  font-size: 2.5rem;
 }
 .main__work_container--card-content .text {
   position: relative;
-  top: 15px;
+  top: -1.5rem;
   font-size: 1.5rem;
   z-index: 2;
   transition: 0.5s;
@@ -10452,11 +10451,13 @@ a {
 }
 .main__work_container--card:hover .main__work_container--card-content h3 {
   opacity: 1;
+  font-size: 3rem;
   transform: translateY(-40px);
 }
 .main__work_container--card:hover .main__work_container--card-content p {
   opacity: 1;
-  transform: translateY(20px);
+  font-size: 1.8rem;
+  transform: translateY(10px);
 }
 .main__work_container--card:hover .main__work_container--card-content .icon {
   font-size: 3rem;
@@ -11272,7 +11273,7 @@ a {
   margin-bottom: 2rem;
 }
 .main__work_title h2 {
-  font-size: 4rem;
+  font-size: 2rem;
 }
 .main__security {
   background-color: #0472ae;
