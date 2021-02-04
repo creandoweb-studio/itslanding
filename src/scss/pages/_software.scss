@@ -1,0 +1,152 @@
+main{
+//   background:purple;
+  .proyects{
+    // background:gray;
+    &__square{
+      background-color: $secundarioAlpha;
+      position: relative;
+      &::before{
+        content:'';
+        position:absolute;
+        top:-50%;
+        left:-50%;
+        bottom:-30%;
+        width:60%;
+        background:$primario2Alpha;
+        pointer-events:none;
+      }
+    }
+    &__imgs{
+      background:pink;
+    }
+    &__content{
+      // background:violet;
+      @include centerFlex;
+      flex-wrap:wrap;
+      text-align:center;
+      padding:1rem;
+      &_title{
+        // background-color: aqua;
+        h2{
+          font-size: 1.5rem;
+        }
+      }
+      &_text{
+        // background: orange;
+        text-align: justify;
+      }
+      &_subtitle{
+        // background: firebrick;
+        h3{
+          color: $secundario;
+          font-size: 1.3rem;
+        }
+      }
+      &_text2{
+        // background: forestgreen;
+        font-style: italic;
+        // font-size: 1.1rem;
+        font-weight: 500;
+      }
+      &_callAction{
+        // background: greenyellow;
+        .actionBtn{
+          // background: darkcyan;
+          padding: 1rem;
+          border: 1px solid $secundario;
+          a{
+            color:$secundario;
+          }
+        }
+      }
+    }
+  }
+  .transport{
+    // background:silver;
+    &__square{
+      background-color: $secundarioAlpha;
+      position: relative;
+      &::before{
+        content:'';
+          position:absolute;
+          top:-150%;
+          left:70%;
+          bottom:10%;
+          width:80%;
+          // height: 200%;
+          background:$primario2Alpha;
+          pointer-events:none;
+      }
+    }
+    &__content{
+      // background:red;
+      @include centerFlex;
+      text-align:justify;
+      padding:0 1rem;
+      margin: 1rem;
+    }
+    &__call{
+    //   background:green;
+      @include centerFlex;
+      text-align:center;
+        .action{
+          padding: 1rem;
+          border: 2px solid $secundario;
+          .phone, .email{
+            color:$primario2;
+            font-weight: 500;
+          }
+        }
+    }
+    &__imgs{
+      background:yellow;
+    }
+  }
+}
+
+// ================================================================
+// ======================= MEDIA QUERIES ==========================
+// ================================================================
+// ================================================================
+// ======================= 320 => 479 ===========================
+// ================================================================
+@include mQ(xsS){
+
+}
+// ================================================================
+// ======================= 480 => 599 ===========================
+// ================================================================
+@include mQ(smallS){
+
+}
+// ================================================================
+// ======================= 600 => 759 ===========================
+// ================================================================
+@include mQ(mediumS){
+
+}
+// ================================================================
+// ======================= 760 => 919 ===========================
+// ================================================================
+@include mQ(wideS){
+
+}
+// ================================================================
+// ======================= 920 => 1199 ===========================
+// ================================================================
+@include mQ(largeS){
+
+}
+// ================================================================
+// ======================= 1200 => 1399 ===========================
+// ================================================================
+@include mQ(xlS){
+
+}
+// ================================================================
+// ======================= 1400 =>  ===========================
+// ================================================================
+@include mQ(opS){
+
+}
+
