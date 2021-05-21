@@ -10340,6 +10340,29 @@ main .transport__imgs {
   grid-row: 2/12;
 }
 
+.web {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+}
+.web__title {
+  grid-column: 2/12;
+  grid-row: 2/3;
+}
+.web__intro {
+  grid-column: 2/12;
+  grid-row: 3/4;
+}
+.web__proyectsImg {
+  grid-column: 2/12;
+  grid-row: 4/11;
+}
+.web__call {
+  grid-column: 2/12;
+  grid-row: 11/12;
+}
+
 .main__contactUS {
   display: flex;
   justify-content: center;
@@ -10919,6 +10942,117 @@ main .transport__imgs {
     height: 200px;
   }
 }
+.catalogo {
+  background-color: #131313;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.catalogo .container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 1200px;
+  transform-style: preserve-3d;
+}
+.catalogo .container .box {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin: 40px;
+  background-color: #232323;
+  border-radius: 20px;
+  transform-style: preserve-3d;
+  z-index: 10;
+}
+.catalogo .container .box :before {
+  content: "camera";
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 6rem;
+  font-weight: 900;
+  color: #3e3c5c;
+  font-style: italic;
+  opacity: 0;
+  transition: 0.5s;
+}
+.catalogo .container .box :after {
+  content: "catalogo";
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 4rem;
+  font-weight: 900;
+  color: #fff;
+  font-style: italic;
+  opacity: 0;
+  transition: 0.5s;
+}
+.catalogo .container .box :hover::before,
+.catalogo .container .box :hover::after {
+  opacity: 0.2;
+}
+.catalogo .container .box .name {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  color: #223a59;
+  width: 100%;
+  transform-style: preserve-3d;
+  transform: translate3d(0, 0, 75px);
+  transition: 0.5s;
+  opacity: 0;
+  z-index: 10;
+}
+.catalogo .container .box:hover .name {
+  top: 40px;
+  opacity: 1;
+}
+.catalogo .container .box .buy {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform-style: preserve-3d;
+  transform: translate3d(-50%, 0, 75px);
+  color: #223a59;
+  background: #333;
+  padding: 10px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.5s;
+  opacity: 0;
+  z-index: 10;
+}
+.catalogo .container .box:hover .buy {
+  bottom: 30px;
+  opacity: 1;
+}
+.catalogo .container .box .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  transition: 0.5s;
+  background-color: #223a59;
+  transform-style: preserve-3d;
+  z-index: 10;
+  opacity: 1;
+  transform: translate3d(-50%, 50%, 50px);
+}
+.catalogo .container .box:hover .product {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+}
+
 .hamburger:focus {
   outline: 0;
   border: 0;
@@ -11678,6 +11812,34 @@ main .transport__call .action .phone, main .transport__call .action .email {
 }
 main .transport__imgs {
   background: yellow;
+}
+
+.web {
+  text-align: center;
+}
+.web__title {
+  padding: 1rem 0;
+}
+.web__intro {
+  padding: 1rem;
+}
+.web__proyectsImg {
+  background-color: salmon;
+  margin: 1rem 0;
+}
+.web__call {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.web__call .action {
+  padding: 1rem;
+  border: 2px solid #321787;
+}
+.web__call .action .phone, .web__call .action .email {
+  color: #0472ae;
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=style.css.map */

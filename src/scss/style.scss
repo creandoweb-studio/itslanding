@@ -27,7 +27,7 @@
 './layout/hero',
 './layout/main',
 './layout/software',
-'./layout/_grid.scss';
+'./layout/web';
 
 // // carpeta components
 @import
@@ -39,6 +39,7 @@
 './components/scroll_progress',
 './components/bg_image',
 './components/carousel',
+'./components/catalogo',
 // './components/heroImg',
 './components/navigation_off_canvas';
 // './components/card',
@@ -53,4 +54,5 @@
 @import
 './pages/hero',
 './pages/main',
-'./pages/software';
+'./pages/software',
+'./pages/web';

@@ -1,0 +1,11 @@
+extends ../includes/layout
+
+append config
+  -pageTitle= "Catalogo"
+
+append config
+  -pages=['Inicio', 'Servicios', 'Proyectos', 'Nosotros']
+  -sites=['index.html#inicio', 'index.html#servicios', 'index.html#grupos', 'index.html#contacto']
+
+block content
+  include ../includes/segCatalogo.pug

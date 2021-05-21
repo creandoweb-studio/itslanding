@@ -15,7 +15,7 @@
     "metalangs": "concurrently \"npm run sass\" \"npm run pug\" \"npm run watchify\"",
     "devserve": "concurrently \"npm run metalangs\" \"npm run serve\"",
     "devproxy": "concurrently \"npm run metalangs\" \"npm run proxy\"",
-    "imagemin": "imagemin \"./src/images/**/*.+(jpg|png)\" -o ./public/images/ -p=pngquant -p=jpeg-recompress",
+    "imagemin": "imagemin \"./src/images/**/*.+(jpg|png)\" -o ./public/images/ npm",
     "webp": "imagemin \"./public/images/**/*.jpg\" -o ./public/images/ -p=webp",
     "svgmin": "imagemin \"./src/images/**/*.svg\" -o ./public/images/ -p=svgo",
     "gifmin": "imagemin \"./src/images/**/*.gif\" -o ./public/images/ -p=gifsicle",
